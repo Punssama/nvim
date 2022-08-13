@@ -15,6 +15,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' } "for find files
 Plug 'tpope/vim-commentary' "for comment code line
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "for syntax highlighting
+Plug 'folke/trouble.nvim' "for showing diagnostics
 
 "snippets
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "for snippets
@@ -31,4 +32,5 @@ source $HOME/.config/nvim/plugins/nerdtree.vim
 source $HOME/.config/nvim/plugins/terminal.vim
 source $HOME/.config/nvim/plugins/telescope.vim
 source $HOME/.config/nvim/plugins/treesitter.vim
+source $HOME/.config/nvim/plugins/diagnostics.vim
 

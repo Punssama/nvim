@@ -1,5 +1,6 @@
-set updatetime=300
+set updatetime=200
 
+let g:jedi#completions_enabled = 0 "for disabling jedi"
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 set signcolumn=yes
