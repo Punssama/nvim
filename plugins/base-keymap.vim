@@ -21,6 +21,12 @@ map.set('n', 'te', ':tabedit<CR>', {silent =true}) --create new tab
 map.set('n', 'sd', ':split<CR><C-w>w',  {silent =true}) --split window down
 map.set('n', 'sn', ':vsplit<CR><C-w>w',  {silent =true}) --split windownext
 
+--resize windows
+map.set('n', '<C-w><left>', '<C-w><')
+map.set('n', '<C-w><right>', '<C-w>>')
+map.set('n', '<C-w><up>', '<C-w>+')
+map.set('n', '<C-w><down>', '<C-w>-')
+
 --move between tabs and windows
 map.set('n', '<S-h>', ':bprevious<CR>', {silent =true}) --next tab
 map.set('n', '<S-l>', ':bnext<CR>',  {silent =true}) --previous tab
