@@ -1,6 +1,6 @@
 set nocompatible
 "for remove ~ symbol
-set fillchars+=eob:*
+set fillchars+=eob:>
 
 set mouse=a "for enabling mouse
 "ggfor hiding the mode status

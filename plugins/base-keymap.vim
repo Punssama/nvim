@@ -3,8 +3,8 @@ local map = vim.keymap
 map.set('n', 'x', '"_x') --do not yank with x
 
 --save and quit file
-map.set('n', '<Space>q', ':q<CR>', {silent =true})
-map.set('n', '<Space>w', ':w<CR>', {silent =true})
+map.set('n', '<Space>q', ':quit<CR>',{silent =true})
+map.set('n', '<Space>w', ':write<CR>', {silent =true})
 
 --increment/decrement
 map.set('n', '-', '<C-x>')
@@ -32,7 +32,7 @@ map.set('n', '<S-h>', ':bprevious<CR>', {silent =true}) --next tab
 map.set('n', '<S-l>', ':bnext<CR>',  {silent =true}) --previous tab
 
 --+move left, down, up, right between windows
-map.set('n', '<Space>', '<C-w>w') --move orderly
+map.set('n', 'ww', '<C-w>w') --move orderly
 map.set('', 'sh', '<C-w>h') --left
 map.set('', 'sj', '<c-w>j') --down
 map.set('', 'sk', '<c-w>k') --up
