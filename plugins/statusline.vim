@@ -1,3 +1,4 @@
+
 lua << END
 require('lualine').setup {
   options = {
@@ -14,7 +15,7 @@ sections = {
       'diagnostics',
      },
     lualine_c = {'filename'},
-    lualine_x = {'encoding', 'fileformat',},
+    lualine_x = {'encoding', 'fileformat'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
   },
@@ -34,6 +35,3 @@ sections = {
 
 require('bufferline').setup {}
 END
-" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
-autocmd BufEnter * if bufname('#') =~ 'NvimTreeToggle_\d\+' && bufname('%') !~ 'NvimTreeToggle_\d\+' && winnr('$') > 1 |
-    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif

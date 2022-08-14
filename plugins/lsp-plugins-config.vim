@@ -12,7 +12,7 @@ require('which-key').setup {
     ["A"] = "ALT",
     },
  
-  triggers = {"g","<space>","<Alt>","<Ctrl","w"},
+  triggers = {"g","<space>","<Alt>","<Ctrl>","z"},
 
   triggers_blacklist = {
     i = {"j", "k", "v" },

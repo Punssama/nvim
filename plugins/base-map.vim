@@ -7,6 +7,9 @@ map.set('n', 'x', '"_x') --do not yank with x
 map.set('n', '<Space>q', ':quit<CR>', silent)
 map.set('n', '<Space>w', ':write<CR>', silent)
 
+--for undo and redo
+map.set('n', 'zz', ':redo<CR>', silent) --redo
+
 --increment/decrement
 map.set('n', '-', '<C-x>')
 map.set('n', '+', '<C-a>')
@@ -52,4 +55,5 @@ map.set('n', '<A-j>', ':m .+1<CR>', silent)
 map.set('n', '<A-k>', ':m .-2<CR>', silent)
 
 END
+
 
