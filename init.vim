@@ -19,7 +19,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' } "for find files
 Plug 'tpope/vim-commentary' "for comment code line
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "for syntax highlighting
-Plug 'folke/trouble.nvim' "for showing diagnostics
+"Plug 'folke/trouble.nvim' "for showing diagnostics
 Plug 'folke/which-key.nvim' "for showing keybindings
 Plug 'mhinz/vim-startify' "for showing keybindings
 
@@ -40,7 +40,7 @@ source $HOME/.config/nvim/plugins/nerdtree.vim
 source $HOME/.config/nvim/plugins/terminal.vim
 source $HOME/.config/nvim/plugins/telescope.vim
 source $HOME/.config/nvim/plugins/treesitter.vim
-source $HOME/.config/nvim/plugins/diagnostics.vim
+" source $HOME/.config/nvim/plugins/diagnostics.vim
 source $HOME/.config/nvim/plugins/lsp-plugins-config.vim
 source $HOME/.config/nvim/plugins/lazy_plugins_config.vim
 

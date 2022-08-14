@@ -1,4 +1,4 @@
-set updatetime=200
+set updatetime=300
 
 let g:jedi#completions_enabled = 0 "for disabling jedi"
 " Always show the signcolumn, otherwise it would shift the text each time
@@ -119,8 +119,5 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
 
-" Add (Neo)Vim's native statusline support.
-" NOTE: Please see `:h coc-status` for integrations with external plugins that
-" provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
+"Formatting
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')

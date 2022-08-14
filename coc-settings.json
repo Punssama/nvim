@@ -1,3 +1,42 @@
 {
- "jedi.enable": false
+  /*for format*/
+ "coc.preferences.formatOnSaveFiletypes": ["css", "html", "javascript", "python", "cpp"],
+ 
+/*for snippets*/
+ "coc.preferences.snippetHighlight": true,
+ "suggest.snippetIndicator": "~",
+ "suggest.detailMaxLength": 100, 
+ "suggest.virtualText": true,
+ "suggest.detailField": "preview", 
+/*for diagnostic*/
+ "diagnostic.level": "hint",
+ "diagnostic.errorSign": "✘", //  ••
+ "diagnostic.warningSign": " ", //  •
+ "diagnostic.hintSign": "", // •
+ "diagnostic.infoSign": "", // •
+ "suggest.floatConfig": {
+   "border": true,
+   "rounded": true,
+   "borderhighlight": "FloatBorder",
+   "highlight": "CocSuggestFloating"
+ },
+ "diagnostic.floatConfig": {
+   "border": true,
+   "rounded": true,
+   "borderhighlight": "FloatBorder",
+   "highlight": "CocSuggestFloating",
+   "maxWidth": 120,
+   "focusable": true
+ },
+ "diagnostic.format": "%message [%source:%code]", // %source code severity message
+ 
+ /*more...*/
+ "codeLens.enable": true,
+ "codeLens.position": "eol",
+ "codeLens.subseparator": " | ",
+ "codeLens.separator": "‣"
+
+
 }
+
+
