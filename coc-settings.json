@@ -3,22 +3,25 @@
  "coc.preferences.formatOnSaveFiletypes": ["css", "html", "javascript", "python", "cpp"],
  
 /*for snippets*/
- "coc.preferences.snippetHighlight": true,
- "suggest.snippetIndicator": "~",
- "suggest.detailMaxLength": 100, 
- "suggest.virtualText": true,
+"coc.preferences.snippetHighlight": true,
+ "suggest.detailMaxLength": 10, 
+ "suggest.virtualText": false,
  "suggest.detailField": "preview", 
 /*for diagnostic*/
  "diagnostic.level": "hint",
- "diagnostic.errorSign": "✘", //  ••
- "diagnostic.warningSign": " ", //  •
- "diagnostic.hintSign": "", // •
- "diagnostic.infoSign": "", // •
+ "diagnostic.errorSign": "", //  •• ✘
+ "diagnostic.warningSign": " ", //  •
+ "diagnostic.hintSign": "", // • 
+ "diagnostic.infoSign": "", // • 
  "suggest.floatConfig": {
    "border": true,
    "rounded": true,
    "borderhighlight": "FloatBorder",
-   "highlight": "CocSuggestFloating"
+   "highlight": "CocSuggestFloating",
+   "winblend": 6
+   
+   
+   
  },
  "diagnostic.floatConfig": {
    "border": true,
@@ -35,7 +38,6 @@
  "codeLens.position": "eol",
  "codeLens.subseparator": " | ",
  "codeLens.separator": "‣"
-
 
 }
 

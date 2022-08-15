@@ -10,7 +10,7 @@ Plug 'akinsho/bufferline.nvim' "for bufferline
 
 "main plugin
 Plug 'dstein64/vim-startuptime' "for showing startuptime
-Plug 'kyazdani42/nvim-web-devicons' "for icons
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'jiangmiao/auto-pairs' "automatic closing pairs
 Plug 'windwp/nvim-ts-autotag', {'for': ['index.html', 'html']} "for auto tag
 Plug 'akinsho/toggleterm.nvim' "for opening terminal in vim 
@@ -32,7 +32,7 @@ call plug#end()
 
 "source config files
 source $HOME/.config/nvim/plugins/base.vim
-source $HOME/.config/nvim/plugins/base-keymap.vim
+source $HOME/.config/nvim/plugins/base-map.vim
 source $HOME/.config/nvim/plugins/colorschemes.vim
 source $HOME/.config/nvim/plugins/coc-settings.vim
 source $HOME/.config/nvim/plugins/statusline.vim
@@ -43,4 +43,6 @@ source $HOME/.config/nvim/plugins/treesitter.vim
 " source $HOME/.config/nvim/plugins/diagnostics.vim
 source $HOME/.config/nvim/plugins/lsp-plugins-config.vim
 source $HOME/.config/nvim/plugins/lazy_plugins_config.vim
+
+
 

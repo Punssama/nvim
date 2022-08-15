@@ -20,4 +20,5 @@ require('which-key').setup {
     },
   ignore_missing = false,
   }
+  
 END
