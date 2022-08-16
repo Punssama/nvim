@@ -12,8 +12,14 @@
             \ '~/golfing',
             \ ]
     let g:startify_lists = [
-          \ { 'type': 'files',     'header': ['   CURRENT']            },
           \ { 'type': 'commands',  'header': ['   Commands']       },
+          \ { 'type': 'files',     'header': ['   Current Project']            },
           \]
-            
+   
+    let g:startify_commands = [
+          \{'ff':['Find file. ', ':Telescope find_files']},
+          \{'fw':['Find word. ', ':Telescope live_grep']}, 
+          \{'fe':['File explorer. ', ':NvimTreeToggle']},
+          \{'df':['Configuration. ', ':edit ~/.config/nvim/plugins']}
+          \]
  
