@@ -20,5 +20,21 @@ require('which-key').setup {
     },
   ignore_missing = false,
   }
-  
+require('filetype').setup {}
+vim.g.did_load_filtypes = 1
+
+_G.__luacache_config = {
+  chunks = {
+    enable = true,
+    path = vim.fn.stdpath('cache')..'/luacache_chunks',
+  },
+  modpaths = {
+    enable = true,
+    path = vim.fn.stdpath('cache')..'/luacache_modpaths',
+  }
+}
+require('impatient')
+require'impatient'.enable_profile()
 END
+
+

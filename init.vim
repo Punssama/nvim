@@ -22,6 +22,8 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "for syntax highligh
 "Plug 'folke/trouble.nvim' "for showing diagnostics
 Plug 'folke/which-key.nvim' "for showing keybindings
 Plug 'mhinz/vim-startify' "for showing keybindings
+Plug 'lewis6991/impatient.nvim' "for loading faster
+Plug 'nathom/filetype.nvim'
 
 "snippets
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "for snippets
