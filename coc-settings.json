@@ -3,14 +3,42 @@
  "coc.preferences.formatOnSaveFiletypes": ["css", "html", "javascript", "python", "cpp"],
  
 /*for snippets*/
-"coc.preferences.snippetHighlight": true,
  "suggest.detailMaxLength": 10, 
  "suggest.virtualText": false,
  "suggest.detailField": "preview", 
+ "suggest.completionItemKindLabels": {
+         "default": "",
+         "text": "", // 
+         "method": "", // 
+         "function": "", // ƒ
+         "constructor": "", // 
+         "field": "", // 料  
+         "variable": "", //  
+         "class": "", // ﴯ 
+         "interface": "", // 
+         "module": "", // 
+         "property": "", // ﰠ
+         "unit": "", //  塞
+         "value": "",
+         "enum": "", // 
+         "keyword": "", // 
+         "snippet": "", //    
+         "color": "",
+         "file": "", // 
+         "reference": "", //  渚
+         "folder": "", // 
+         "enumMember": "", // 
+         "constant": "", // 
+         "struct": " ", // 
+         "event": "", // 鬒
+         "operator": "", // 
+         "typeParameter": " " //   
+       },
 /*for diagnostic*/
  "diagnostic.level": "hint",
- "diagnostic.errorSign": "", //  •• ✘
- "diagnostic.warningSign": " ", //  •
+ "Lua.diagnostics.enable": true,
+ "diagnostic.errorSign": "", //  •• ✘
+ "diagnostic.warningSign": " ", //  •
  "diagnostic.hintSign": "", // • 
  "diagnostic.infoSign": "", // • 
  "suggest.floatConfig": {
@@ -38,7 +66,6 @@
  "codeLens.position": "eol",
  "codeLens.subseparator": " | ",
  "codeLens.separator": "‣"
-
 }
 
 

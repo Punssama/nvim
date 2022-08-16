@@ -1,5 +1,5 @@
 lua << END
-require('telescope').setup{}
+require('telescope').setup {}
 END
 "mapping
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
