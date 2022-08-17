@@ -37,10 +37,10 @@
 /*for diagnostic*/
  "diagnostic.level": "hint",
  "Lua.diagnostics.enable": true,
- "diagnostic.errorSign": "", //  •• ✘
- "diagnostic.warningSign": " ", //  •
- "diagnostic.hintSign": "", // • 
- "diagnostic.infoSign": "", // • 
+ "diagnostic.errorSign": "👾", //  •• ✘    👾
+ "diagnostic.warningSign": "🤬", //  •🤬
+ "diagnostic.hintSign": "☝️ ", // •    ☝️
+ "diagnostic.infoSign": "👀", // • 
  "suggest.floatConfig": {
    "border": true,
    "rounded": true,

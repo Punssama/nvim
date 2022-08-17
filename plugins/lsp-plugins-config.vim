@@ -33,6 +33,7 @@ local setup = {
   key_labels = {
     -- override the label used to display some keys. It doesn't effect WK in any other way.
     -- For example:
+     ["<leader>"] = "SPACE",
      ["<space>"] = "SPC",
      ["<C>"] = "Ctr",
      ["<tab>"] = "TAB",
@@ -132,7 +133,13 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
-}
+
+  T = {
+    name = "TreeSitter",
+    i = {"<cmd>TSConfigInfo<cr>", "Info"}
+    },
+},
+
 
 which_key.setup(setup)
 which_key.register(mappings, opts)

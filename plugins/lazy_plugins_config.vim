@@ -13,7 +13,7 @@
             \ ]
     let g:startify_lists = [
           \ { 'type': 'commands',  'header': ['   Commands']       },
-          \ { 'type': 'files',     'header': ['   Current Project']            },
+          \ { 'type': 'files',     'header': ['   Recent Projects']            },
           \]
    
     let g:startify_commands = [

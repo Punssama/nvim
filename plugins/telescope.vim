@@ -1,5 +1,11 @@
 lua << END
-require('telescope').setup {}
+require('telescope').setup {
+  defaults = {
+    prompt_prefix = "  ", --
+    selection_caret = "🧐 ",
+    path_display = {"smart"},
+    }
+  }
 END
 "mapping
 nnoremap \ff <cmd>Telescope find_files<cr>
