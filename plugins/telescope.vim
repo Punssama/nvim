@@ -2,7 +2,7 @@ lua << END
 require('telescope').setup {}
 END
 "mapping
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap \ff <cmd>Telescope find_files<cr>
+nnoremap \fg <cmd>Telescope live_grep<cr>
+nnoremap \fb <cmd>Telescope buffers<cr>
+nnoremap \fh <cmd>Telescope help_tags<cr>

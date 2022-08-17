@@ -1,6 +1,12 @@
 lua << END
 local map = vim.keymap
-local silent = {silent = true}
+local silent = {noremap = true,silent = true}
+--change leader to space
+map.set("", "<Space>", "<Nop>", silent)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+
 map.set('n', 'x', '"_x') --do not yank with x
 
 --save and quit file
