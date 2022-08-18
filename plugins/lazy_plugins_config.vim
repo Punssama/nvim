@@ -17,7 +17,7 @@
           \]
    
     let g:startify_commands = [
-          \{'ff':['Find file. ', ':Telescope find_files']},
+          \{'ff':['Find file. ', ':Telescope find_files hidden=true']},
           \{'fw':['Find word. ', ':Telescope live_grep']}, 
           \{'fe':['File explorer. ', ':NvimTreeToggle']},
           \{'df':['Configuration. ', ':edit ~/.config/nvim/plugins']}

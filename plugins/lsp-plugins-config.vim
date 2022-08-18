@@ -87,7 +87,7 @@ local mappings = {
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
-  ["f"] = {"<cmd>Telescope find_files<cr>","Find files"},
+  ["f"] = {"<cmd>Telescope find_files hidden=true<cr>","Find files"},
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
   ["n"] = {"<cmd>tabedit<cr>", "New tab"},
@@ -138,7 +138,14 @@ local mappings = {
     name = "TreeSitter",
     i = {"<cmd>TSConfigInfo<cr>", "Info"}
     },
+  
+  L = {
+    name = "Clear",
+    u = {"<cmd>!rm -rf ~/.vim/undo <cr>", "Clear undo cache"},
+    l = {"<cmd>LuaCacheClear<cr>", "Clear lua cache"}
+    },
 },
+  
 
 
 which_key.setup(setup)

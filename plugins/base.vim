@@ -57,4 +57,9 @@ set ignorecase
 set smartcase
 set showmatch
 
-
+"undo after save
+if has('persistent_undo')      "check if your vim version supports it
+  silent !mkdir -p ~/.vim/undo
+  set undofile                 "turn on the feature  
+  set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
+  endif  
