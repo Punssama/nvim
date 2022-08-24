@@ -5,8 +5,11 @@ Plug 'folke/tokyonight.nvim' "tokyonight theme
 Plug 'navarasu/onedark.nvim' "onedark theme
 Plug 'ayu-theme/ayu-vim' "ayu theme
 Plug 'dracula/vim', { 'name': 'dracula' } "dracula theme
+Plug 'lalitmee/cobalt2.nvim' "cobalt2 theme
+Plug 'Rigellute/shades-of-purple.vim' "shades of purple theme
 Plug 'nvim-lualine/lualine.nvim' "for status line
 Plug 'akinsho/bufferline.nvim' "for bufferline
+Plug 'tjdevries/colorbuddy.nvim' "colorbuddy
 
 "main plugin
 Plug 'dstein64/vim-startuptime' "for showing startuptime

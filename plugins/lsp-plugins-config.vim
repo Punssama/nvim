@@ -1,3 +1,5 @@
+" By default timeoutlen is 1000 ms
+set timeoutlen=300
 lua << END
 ---which key
 
@@ -86,7 +88,7 @@ local opts = {
 local mappings = {
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
-  ["q"] = { "<cmd>q!<CR>", "Quit" },
+  ["q"] = { "<cmd>q<CR>", "Quit" },
   ["f"] = {"<cmd>Telescope find_files hidden=true<cr>","Find files"},
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
@@ -144,7 +146,15 @@ local mappings = {
     u = {"<cmd>!rm -rf ~/.vim/undo <cr>", "Clear undo cache"},
     l = {"<cmd>LuaCacheClear<cr>", "Clear lua cache"}
     },
-},
+  c = {
+    name = "Coc-nvim",
+    s = {"<cmd>Cocstart<cr>", "Start Coc"},
+    r = {"<cmd>CocRestart<cr>", "Restart Coc"},
+    i = {"<cmd>PlugInstall<cr>", "Coc install plugin"},
+    u = {"<cmd>CocUpdate<cr>", "Coc update"},
+    d = {"<cmd>CocDiagnostics<cr>", "Diagnostics"},
+    }
+}
   
 
 

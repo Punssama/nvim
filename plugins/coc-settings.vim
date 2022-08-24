@@ -1,4 +1,5 @@
-set updatetime=300
+set updatetime=250
+set timeoutlen=250
 
 let g:jedi#completions_enabled = 0 "for disabling jedi"
 " Always show the signcolumn, otherwise it would shift the text each time
@@ -33,8 +34,8 @@ endif
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> g[ <Plug>(coc-diagnostic-prev)
+nmap <silent> g] <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)

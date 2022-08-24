@@ -9,10 +9,6 @@ vim.g.maplocalleader = " "
 
 map.set('n', 'x', '"_x') --do not yank with x
 
---save and quit file
-map.set('n', '<Space>q', ':quit<CR>', silent)
-map.set('n', '<Space>w', ':write<CR>', silent)
-
 --for undo and redo
 map.set('n', 'zz', ':redo<CR>', silent) --redo
 

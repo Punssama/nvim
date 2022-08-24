@@ -34,5 +34,5 @@ require("toggleterm").setup{
   },
 }
 local map = vim.keymap
-map.set('n','<C-t>' ,':ToggleTerm<CR>')
+map.set('n','<C-t>' ,':ToggleTerm<CR>', {silent = true})
 END
