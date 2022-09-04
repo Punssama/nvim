@@ -1,9 +1,8 @@
 " By default timeoutlen is 1000 ms
-set timeoutlen=300
 lua << END
 ---which key
-
-
+vim.opt.timeoutlen = 300
+vim.opt.updatetime = 100
 
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
@@ -37,7 +36,7 @@ local setup = {
     -- For example:
      ["<leader>"] = "SPACE",
      ["<space>"] = "SPC",
-     ["<C>"] = "Ctr",
+     ["<C>"] = "CTRL",
      ["<tab>"] = "TAB",
   },
   icons = {
@@ -93,6 +92,7 @@ local mappings = {
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
   ["n"] = {"<cmd>tabedit<cr>", "New tab"},
+  ["/"] = {"<cmd>Commentary<cr>", "Comment"},
 
   g = {
     name = "Git",
@@ -153,6 +153,23 @@ local mappings = {
     i = {"<cmd>PlugInstall<cr>", "Coc install plugin"},
     u = {"<cmd>CocUpdate<cr>", "Coc update"},
     d = {"<cmd>CocDiagnostics<cr>", "Diagnostics"},
+    },
+  l = {
+    name = "Lime light",
+    o = {
+      name = "options [0.1 ~> 1.0]",
+      ["1"] = {"<cmd>Limelight0.1<cr>", "light level:0,1"},
+      ["2"] = {"<cmd>Limelight0.2<cr>", "light level:0,2"},
+      ["3"] = {"<cmd>Limelight0.3<cr>", "light level:0,3"},
+      ["4"] = {"<cmd>Limelight0.4<cr>", "light level:0,4"},
+      ["5"] = {"<cmd>Limelight0.5<cr>", "light level:0,5"},
+      ["6"] = {"<cmd>Limelight0.6<cr>", "light level:0,6"},
+      ["7"] = {"<cmd>Limelight0.7<cr>", "light level:0,7"},
+      ["8"] = {"<cmd>Limelight0.8<cr>", "light level:0,8"},
+      ["9"] = {"<cmd>Limelight0.9<cr>", "light level:0,9"},
+      m = {"<cmd>Limelight1<cr>", "light level:1"},
+    },
+    f = {"<cmd>Limelight!<cr>", "Lime light off"}
     }
 }
   

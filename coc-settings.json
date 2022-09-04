@@ -45,11 +45,7 @@
    "border": true,
    "rounded": true,
    "borderhighlight": "FloatBorder",
-   "highlight": "CocSuggestFloating",
-   "winblend": 6
-   
-   
-   
+   "highlight": "CocSuggestFloating" 
  },
  "diagnostic.floatConfig": {
    "border": true,
