@@ -22,10 +22,11 @@ map.set('n', 'dw', 'vb"_d')
 --select all
 map.set('n', '<C-a>', 'gg<S-v>G')
 
---new tab and split windows
+--new/remove tab and split windows
 map.set('n', 'te', ':tabedit<CR>', silent) --create new tab
 map.set('n', 'sd', ':split<CR><C-w>w', silent)--split window down
 map.set('n', 'sn', ':vsplit<CR><C-w>w', silent) --split windownext
+map.set('n', 'tr', ':bd<CR>', silent) --close current tab
 
 --resize windows
 map.set('n', '<C-w><left>', '<C-w><')

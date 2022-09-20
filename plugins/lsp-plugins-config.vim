@@ -170,6 +170,13 @@ local mappings = {
       m = {"<cmd>Limelight1<cr>", "light level:1"},
     },
     f = {"<cmd>Limelight!<cr>", "Lime light off"}
+    },
+  ["<F5>"] = {
+    name = "Run",
+    n = {"<cmd>!node % <cr>", "Run current JavaScript file"},
+    p = {"<cmd>!python3 %<cr>", "Run current Python3 file"},
+
+    --add your run commands below--
     }
 }
   
@@ -196,6 +203,7 @@ _G.__luacache_config = {
 }
 require('impatient')
 require'impatient'.enable_profile()
+
 END
 
 

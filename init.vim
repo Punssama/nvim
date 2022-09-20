@@ -1,9 +1,11 @@
 call plug#begin()
 "for beautifying vim
+" Plug 'Lunarvim/onedarker.nvim'"onedarker
+" Plug 'Lunarvim/synthwave84.nvim' "christ machine synthwave'84 colorscheme
 Plug 'EdenEast/nightfox.nvim' "nightfox theme
 Plug 'folke/tokyonight.nvim' "tokyonight theme
 Plug 'navarasu/onedark.nvim' "onedark theme
-Plug 'ayu-theme/ayu-vim' "ayu theme
+Plug 'shatur/neovim-ayu' "ayu theme
 Plug 'dracula/vim', { 'name': 'dracula' } "dracula theme
 Plug 'lalitmee/cobalt2.nvim' "cobalt2 theme
 Plug 'Rigellute/shades-of-purple.vim' "shades of purple theme

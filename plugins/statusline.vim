@@ -33,5 +33,13 @@ sections = {
   extensions = {}  
 }
 
-require('bufferline').setup {}
+require('bufferline').setup {
+  options = {
+    mode = "buffers",
+    show_tab_indicators = true,
+    seperator_style = "thin",
+    diagnostics = "coc",
+
+    }
+  }
 END

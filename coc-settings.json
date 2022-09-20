@@ -3,9 +3,15 @@
  "coc.preferences.formatOnSaveFiletypes": ["css", "html", "javascript", "python", "cpp"],
  
 /*for snippets*/
+ "suggest.floatConfig": {
+   "border": true,
+   "rounded": true,
+   "borderhighlight": "FloatBorder",
+   "highlight": "CocSuggestFloating" 
+ },
  "suggest.detailMaxLength": 10, 
  "suggest.virtualText": false,
- "suggest.detailField": "preview", 
+ "suggest.detailField": "abbr", 
  "suggest.completionItemKindLabels": {
          "default": "",
          "text": "", // 
@@ -41,12 +47,6 @@
  "diagnostic.warningSign": "🤬", //  •🤬
  "diagnostic.hintSign": "☝️ ", // •    ☝️
  "diagnostic.infoSign": "👀", // • 
- "suggest.floatConfig": {
-   "border": true,
-   "rounded": true,
-   "borderhighlight": "FloatBorder",
-   "highlight": "CocSuggestFloating" 
- },
  "diagnostic.floatConfig": {
    "border": true,
    "rounded": true,
@@ -55,13 +55,9 @@
    "maxWidth": 120,
    "focusable": true
  },
- "diagnostic.format": "%message [%source:%code]", // %source code severity message
+ "diagnostic.format": "%message [%source:%code]" // %source code severity message
  
  /*more...*/
- "codeLens.enable": true,
- "codeLens.position": "eol",
- "codeLens.subseparator": " | ",
- "codeLens.separator": "‣"
 }
 
 
