@@ -1,4 +1,4 @@
-set updatetime=250
+set updatetime=1000
 set timeoutlen=250
 
 let g:jedi#completions_enabled = 0 "for disabling jedi"

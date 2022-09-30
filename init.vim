@@ -31,12 +31,16 @@ Plug 'lewis6991/impatient.nvim' "for loading faster
 Plug 'nathom/filetype.nvim'
 Plug 'junegunn/limelight.vim' "for hightlight current space
 Plug 'mg979/vim-visual-multi', {'branch': 'master'} "multi cursors for neovim
+Plug 'antoinemadec/FixCursorHold.nvim'
+Plug 'nvim-lua/popup.nvim'
+
+
 
 "snippets
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "for snippets
-
 call plug#end()
 
+let g:cursorhold_updatetime = 100 
 
 
 "source config files
@@ -50,8 +54,11 @@ source $HOME/.config/nvim/plugins/terminal.vim
 source $HOME/.config/nvim/plugins/telescope.vim
 source $HOME/.config/nvim/plugins/treesitter.vim
 " source $HOME/.config/nvim/plugins/diagnostics.vim
-source $HOME/.config/nvim/plugins/lsp-plugins-config.vim
 source $HOME/.config/nvim/plugins/lazy_plugins_config.vim
+
+"lsp
+source $HOME/.config/nvim/plugins/lsp/lsp-plugins-config.vim
+
 
 
 

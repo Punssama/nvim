@@ -4,6 +4,13 @@
   "pyright.inlayHints.enable": false,
   "pyright.inlayHints.functionReturnTypes": false,
 
+  /*config tsserver*/
+  "tsserver.formatOnType": false,
+  "javascript.suggest.objectLiteralMethodSnippets.enabled":true,
+  
+
+  
+
   /*for format*/
  "coc.preferences.formatOnSaveFiletypes": ["css", "html", "javascript", "python", "cpp"],
  
