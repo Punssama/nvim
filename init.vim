@@ -30,6 +30,7 @@ Plug 'mhinz/vim-startify' "for starting screen
 Plug 'lewis6991/impatient.nvim' "for loading faster
 Plug 'nathom/filetype.nvim'
 Plug 'junegunn/limelight.vim' "for hightlight current space
+Plug 'mg979/vim-visual-multi', {'branch': 'master'} "multi cursors for neovim
 
 "snippets
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "for snippets

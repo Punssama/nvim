@@ -1,4 +1,9 @@
 {
+  /*config pyright*/
+  "pyright.inlayHints.variableTypes": false,
+  "pyright.inlayHints.enable": false,
+  "pyright.inlayHints.functionReturnTypes": false,
+
   /*for format*/
  "coc.preferences.formatOnSaveFiletypes": ["css", "html", "javascript", "python", "cpp"],
  
