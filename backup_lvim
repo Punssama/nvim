@@ -5,6 +5,7 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
 -- Enable powershell as your default shell
+--=
 vim.opt.shell = "pwsh.exe"
 vim.opt.shellcmdflag =
 "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;"
@@ -39,7 +40,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "onedark"
+lvim.colorscheme = "catppuccin"
 -- to disable icons and use a minimalist setup, uncomment the following
 lvim.use_icons = true
 -- keymappings [view all the defaults by pressing <leader>Lk]
@@ -71,21 +72,19 @@ lvim.keys.normal_mode["sd"] = ":split<cr><C-w>w"
 lvim.keys.normal_mode["sn"] = ":vsplit<cr><C-w>w"
 lvim.keys.normal_mode["tr"] = ":bd<cr>"
 
-
--- map.set('n', '<C-w><right>', '<C-w>>')
 -- map.set('n', '<C-w><up>', '<C-w>+')
 
 --+move left, down, up, right between windows
 --move orderly
 lvim.keys.normal_mode["ww"] = "<C-w>w"
 --left
-lvim.keys.normal_mode["sh"] = "<C-w>h"
+lvim.keys.normal_mode["th"] = "<C-w>h"
 --down
-lvim.keys.normal_mode["sj"] = "<C-w>j"
+lvim.keys.normal_mode["tj"] = "<C-w>j"
 --up
-lvim.keys.normal_mode["sk"] = "<C-w>k"
+lvim.keys.normal_mode["tk"] = "<C-w>k"
 --right
-lvim.keys.normal_mode["sl"] = "<C-w>l"
+lvim.keys.normal_mode["tl"] = "<C-w>l"
 --with arrows
 --ltft
 lvim.keys.normal_mode["<left>"] = "<C-w>h"
@@ -102,6 +101,15 @@ lvim.keys.normal_mode["<C-w>left"] = "<C-w><"
 lvim.keys.normal_mode["<C-w>up"] = "<C-w>+"
 --for move line
 lvim.keys.normal_mode["<C-t>"] = ":ToggleTerm<cr>"
+
+--Change line number mode
+vim.cmd([[
+set number
+autocmd!
+autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+augroup END
+]])
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
@@ -168,11 +176,10 @@ lvim.builtin.treesitter.highlight = {
   enable = true,
   disable = { "rust", "html" }
 }
-lvim.builtin.treesitter.autotag.enable = true
+lvim.builtin.treesitter.autotag.enable = false
 lvim.builtin.treesitter.auto_install = true
 lvim.builtin.treesitter.additional_vim_regex_highlighting = false
 lvim.builtin.treesitter.indent.enable = true
-
 
 
 -- generic LSP settings
@@ -219,6 +226,7 @@ lvim.lsp.installer.setup.automatic_installation = false
 --   --Enable completion triggered by <c-x><c-o>
 --   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 -- end
+
 
 -- -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
@@ -281,14 +289,86 @@ lvim.plugins = {
     "lunarvim/horizon.nvim" --horizon
   },
   {
-    "lunarvim/synthwave84.nvim" --synthwave84
-  },
-  {
-    "windwp/nvim-ts-autotag",
+    "lunarvim/synthwave84.nvim", --synthwave84
     config = function()
-      require('nvim-ts-autotag').setup()
-    end,
+      require 'synthwave84'.setup({
+        glow = {
+          error_msg = true,
+          type2 = true,
+          func = true,
+          keyword = true,
+          operator = false,
+          buffer_current_target = true,
+          buffer_visible_target = true,
+          buffer_inactive_target = true,
+        }
+      })
+    end
+
+  },
+  -- {
+  --   "windwp/nvim-ts-autotag",
+  --   config = function()
+  --     require('nvim-ts-autotag').setup()
+  --   end,
+  -- },
+  {
+    "zaldih/themery.nvim",
+    lazy = false,
+    config = function()
+      require("themery").setup({
+        themes = { "synthwave84", "ayu", "horizon", "dracula", "onedark" }, -- Your list of installed colorschemes.
+        livePreview = true,
+      })
+    end
+  }, {
+  "brenoprata10/nvim-highlight-colors",
+  config = function()
+    require("nvim-highlight-colors").setup {
+      ---@usage 'background'|'foreground'|'virtual'
+      render = 'background',
+
+      virtual_symbol = '',
+      virtual_symbol_position = 'eow',
+
+      ---Highlight hex colors, e.g. '#FFFFFF'
+      enable_hex = true,
+
+      ---Highlight short hex colors e.g. '#fff'
+      enable_short_hex = true,
+
+      ---Highlight rgb colors, e.g. 'rgb(0 0 0)'
+      enable_rgb = true,
+
+      ---Highlight hsl colors, e.g. 'hsl(150deg 30% 40%)'
+      enable_hsl = true,
+
+      ---Highlight CSS variables, e.g. 'var(--testing-color)'
+      enable_var_usage = true,
+
+      ---Highlight named colors, e.g. 'green'
+      enable_named_colors = false,
+
+      ---Highlight tailwind colors, e.g. 'bg-blue-500'
+      enable_tailwind = false,
+
+      custom_colors = {
+        { label = '%-%-theme%-primary%-color',   color = '#0f1219' },
+        { label = '%-%-theme%-secondary%-color', color = '#5a5d64' },
+      },
+
+    }
+  end
+},
+  -- {
+  --   "github/copilot.vim"
+
+  -- },
+  {
+    "catppuccin/nvim"
+
   }
+
 
 }
 
@@ -311,6 +391,5 @@ lvim.plugins = {
 --   { command = "flake8", filetypes = { "python" } },
 
 -- }
-
 --my own config
 vim.opt.timeoutlen = 100
